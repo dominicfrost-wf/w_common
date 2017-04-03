@@ -206,6 +206,7 @@ class Disposable implements _Disposable, DisposableManagerV3 {
   /// Dispose of the object, cleaning up to prevent memory leaks.
   @override
   Future<Null> dispose() async {
+    print('disposing ${this.runtimeType}');
     if (isDisposed) {
       return null;
     }
